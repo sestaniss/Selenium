@@ -1,0 +1,109 @@
+Locators:
+    XPath
+    CSS
+
+Element Command:
+1- .clear()
+2- .getText()
+3- .Getattribute()
+
+--------------------------------------------------CSS--------------------------------------------------------
+1- get an Element using CSS selector
+    a.Syntax:
+           tagname[attribute = 'attribute value']
+
+ the beauty about CSS selector is that instead of writing the full syntax you can also use shortcuts
+
+ classname----> tagname[classname='value'] you can write "tagname.value" ---> .
+ ID ------> tagname [id='value'] you can write "tagname#value" -----> #
+
+ Note:
+    In CSS selector we do not have this option of getting an element by TEXT
+
+    but CSS has this contains method that can be used
+        Syntax: for contains method for css
+        tagname[attribute *= 'partial attribute value'] where * means contains here
+
+        CSS has some other amazing features to like
+            starts-with method in css:
+                tagname[attribute ^= 'starting attribute value'] where ^ means starts with
+
+                example: <input id="aba ca dabra hello", email ="rote"/>
+                            input[id ^= 'abra cca dab']
+
+             b.ends-with method in css:
+                $ symbol represents ends-with method in css
+
+                    Syntax:
+                        tagname[attribute $='ending attribute value']
+
+                        Example: <input id="abra ca dabra hello" ,email="rote"/>
+                        write the css selector using ends with method:
+                        input[id $='hello']
+
+-----------------------------------------------------------------------------------------------------
+Approach to select the radio button:
+
+1. locate the webElement in the DOM
+2. write the appropriate locator to select it
+3. use driver.findElement to find that in your code
+4. click on it
+
+isEnabled() --> check if the radio button is can be selected or not (if not selectable usually it is greyed out)
+isDisplayed() -->  check if the webElement is diplayed on the page or not
+isSelected() -->  check if the radio button is selected or not (return true if selected)
+
+---------------------------------------------Revision----------------------------------------------------
+1- locators:
+8 locators
+
+1-id
+2-name
+3-className
+4-partial link text
+5-link text
+6-CSS
+7-XPath
+8-Tagname
+
+Syntax for XPath // tagname[@attribute='value']
+
+-----------------------------------------------------------------
+WebElement Commands:
+
+1- .clear();
+2- .getText(); ----> get the text
+3- getattribute()---> get the value of particular attribute
+4- isSelected(); ------> to check is the element is checked (clicked) or not
+5- isDisplayed() ---> is it there on the screen or not
+6- isEnabled() ----> is it clickable or are we able to send text to it in case of a text box
+
+
+1. Radio Buttons:
+Select a radio button
+Approach:
+1- open the dom and inspect it
+2- Write down the correct locator that will select it
+3- find that using driver.findelement in your code
+4- just simply click on it
+
+
+Logic Building
+a scenario:
+lets assume there are 4 radio buttons and you wantto select the one that says " 5 - 15 "
+1- inspect the radio button that you want to select 5-15
+2- write down the correct locator that selects the WebElement 5 - 15
+3- find the WebElement using driver.findelement through code
+4-  just simply click on it
+
+will the above approach work for this task???
+no it is not a very good approach because in the future if we want to select 0 - 15 or any other value it will be a hustle
+
+so what`s the better approach:
+1- inspect the webElement of interest (4 radio buttons) and find the in the dom
+2- write the locator in such a way that it selects all those 4
+3- find all those elements in the code using driver.findElements
+4- loop through the list and get each WebElement one by one
+5- whenever while iterating you go through figure out which attribute might help you in detecting it is your
+desired one (by inspecting the variable in Dom )
+6- if you get your desired use if else to click on it.
