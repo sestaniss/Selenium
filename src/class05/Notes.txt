@@ -1,0 +1,75 @@
+Approach to select the check box single
+1-inspect the checkbox
+2-write down the correct locator in the Dom
+3- use find element then find the checkbox
+4-click on it
+
+    if I want to check that checkbox is selected or not?
+        checkbox.isSelected(); ---> (means selected)
+
+Preferred Approach when it comes to multiple checkboxes
+    1- inspect them in the Dom
+    2- write the locator in such a way that it is able to select all the required checkboxes
+    3- use find Elements to get all those checkboxes
+    4- iterate through the list
+    5- while iteration look for your desired checkbox(inspect the Dom to see which information provides you then indication
+    that this is your desired checkbox)
+    6- if condition to make the selection
+    .........................................................................................................................
+
+    Drop Down: ----> two types:
+    1- Single select
+    2- Multi select
+    -------------------
+    When it comes to drop Down we have a class in selenium that helps us interact with them
+    ------> Select class;---->in order to be able to use this class yur drop down must be made in the DOM using SELECT tag.
+    Approach:
+        1- inspect the Drop Down
+        2- check if it has the select tag
+        3- Write down the locator to find the WebElement drop down
+        4- Declare an object of the select class(pass the WebElement in the parameters)
+        5- use methods from select class to select the desired option.
+        ---->selectByVisibleText();
+        byValue();
+        byIndex();
+
+Multi Select Drop Down---->
+Approach:
+    1. inspect the drop down
+    2. check f it has the select tag
+    3. write down the locator to find the WebElement drop down
+    4. Declare an object of the select class (pass the Web Element in the parameters)
+    5. use methods from select class to select the desired option
+
+
+    --> you can use Deselect Methods also in case of multi select drop down
+
+
+    --> to check if the dropDown is multiselect or not you can use isMultiSelect --> returns a boolean true if it is a multi select drop down
+
+    --> in select by index
+    indexing starts from 0 if first option is not disabled
+    indexing starts from 1 if first option is disabled
+
+
+
+    -------------------------Alerts------------------------------------------
+
+    alerts are the pop up windows that appear without dealing with them you can not
+    proceed on with doing anything else
+
+    you cannot inspect them
+
+    1. Java Script alerts --->
+    2. HTML base based alerts / pop ups --> we can deal with how we deal with other web elements
+    3. Window based --> we can not deal with them using seleium
+
+    Java Script alerts:
+    1. Simple alert -->
+    2. Confirmation Alert
+    3. Prompt Alert
+
+
+    you deal with all of them in the exact same way
+
+

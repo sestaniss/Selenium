@@ -1,0 +1,31 @@
+**class 06**
+
+1. swithcTo.windows();
+
+
+2.swtichTo.frame();
+
+whenever there is some element in a frame in order to interact with it we need to shift the focus f the driver to that fram
+
+driver.switchTo.frame()  --->
+`.by id or name
+by index
+we webElement
+
+defaultcontent
+
+
+3. explicit wait: --->
+    are the global?
+    Not global
+
+    Implicit wait--?
+    globals wait --> they are implemented automatically to the whole class
+
+    implicit ---> is going to wait until the Webelement is found
+
+    explicit wait:
+
+    conditional waits,
+    is enabled
+    is visible
