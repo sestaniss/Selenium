@@ -1,0 +1,18 @@
+**********************WebDriver Waits*************************
+1. Implicit
+2. Explicit
+
+Implicit wait---> it is a global wait and is going to wait until the WebElement is found.
+
+Explicit wait---> is conditional wait that is going to wait until a condition is fulfilled.
+
+syntax:
+    WebDriverWait wait=new WebDriverWait(driver.timeOut);
+
+    wait.until(ExpectedConditions.alertIsPresent(element));
+
+
+    Can we use both implicit and explicit wait in the same code?
+    YES
+
+    always have implicit wait in start, it is a good practice
